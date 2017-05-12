@@ -1,0 +1,32 @@
+{
+  "name": "ngx-table-sortable",
+  "version": "0.1.0",
+  "description": "Angular directive for making table sorting easy.",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shldk/ngx-table-sortable.git"
+  },
+  "keywords": [
+    "angular",
+    "table",
+    "sort",
+    "sortable"
+  ],
+  "author": "Stas Hladki <stas.hladki@gmail.com> (http://stashladki.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shldk/ngx-table-sortable/issues"
+  },
+  "homepage": "https://github.com/shldk/ngx-table-sortable#readme",
+  "devDependencies": {
+    "@angular/core": "^4.1.2",
+    "rxjs": "^5.4.0",
+    "typescript": "^2.3.2",
+    "zone.js": "^0.8.10"
+  },
+  "typings": "./index.d.ts"
+}
