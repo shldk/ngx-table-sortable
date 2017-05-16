@@ -1,6 +1,6 @@
 {
   "name": "ngx-table-sortable",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Angular directive for making table sorting easy.",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "@angular/core": "^2.3.1 || >=4.0.0"
   },
   "devDependencies": {
+    "@angular/core": "4.0.0",
     "rxjs": "^5.4.0",
     "typescript": "^2.3.2",
     "zone.js": "^0.8.10"
