@@ -35,7 +35,7 @@ export class NgxTableSortableDirective implements OnInit, AfterViewInit {
     private registerCellClickHandlers() {
         Array.prototype.forEach.call(this.headerCells, (cell: any) => {
             cell.addEventListener('click', (e: any) => {
-                this.cellClickHandler(e.target);
+                this.cellClickHandler(e.currentTarget);
             });
         })
     }
