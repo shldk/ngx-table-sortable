@@ -10,6 +10,9 @@ export class NgxTableSortableDirective implements OnInit, AfterViewInit {
 
     @Input('ngxTableSortable')
     private sortingSettings: SortingSettings;
+    @Input('headerCellSelector')
+    private headerCellSelector: string;
+
     @Output()
     private onSortingChanged = new EventEmitter();
 
@@ -26,12 +29,12 @@ export class NgxTableSortableDirective implements OnInit, AfterViewInit {
     }
 
     private initHeaderCells() {
-        this.headerCells = this.el.nativeElement.querySelectorAll('thead tr th');
+        this.headerCells = this.el.nativeElement.querySelectorAll(this.headerCellSelector || 'thead tr th');
     }
 
     private registerCellClickHandlers() {
-        Array.prototype.forEach.call(this.headerCells, (cell: HTMLTableCellElement) => {
-            cell.addEventListener('click', (e) => {
+        Array.prototype.forEach.call(this.headerCells, (cell: any) => {
+            cell.addEventListener('click', (e: any) => {
                 this.cellClickHandler(e.target);
             });
         })
@@ -46,7 +49,7 @@ export class NgxTableSortableDirective implements OnInit, AfterViewInit {
 
 
     private toggleSortingClasses() {
-        Array.prototype.forEach.call(this.headerCells, (cell: HTMLTableCellElement) => {
+        Array.prototype.forEach.call(this.headerCells, (cell: any) => {
             this.removeSortingClasses(cell);
 
             if (cell.dataset.field === this.sortingSettings.by) {
